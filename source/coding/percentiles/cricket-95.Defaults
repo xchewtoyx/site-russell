@@ -1,0 +1,29 @@
+target --default--
+   snmp-host            = %router%
+   display-name		= %interface-name%
+   inst			= map(interface-name)
+   long-desc		= %short-desc%
+   target-type		= standard-interface-95
+   95-preview		= "<img src=grapher.cgi?type=png;inst=0;dslist=ifInOctets,ifOutOctets,if95Octets;range=151200;target=%auto-target-path%/%auto-target-name%>"
+
+rra 5minAve	AVERAGE:0.5:1:10000
+
+datasource  if95Octets
+   dataDir     = %auto-base%/../cricket-data/%auto-target-path%
+   rrd-ds-type	= GAUGE
+   ds-source   = exec:3:%auto-base%/../contrib/cricket-95.pl" "%dataDir%/%auto-target-name%.rrd
+
+graph 	    if95Octets
+   color 		= red
+   draw-as		= LINE1
+   legend		= "95th Percentile bit rate"
+   y-axis		= "bits per second"
+   units		= "bits/sec"
+   scale		= 8,*
+   y-min		= 0
+   show-max		= false
+   show-avg-max	        = false
+
+targetType  standard-interface-95
+   ds  	               = "ifInOctets, ifOutOctets, if95Octets"
+   view                = "Octets: ifInOctets ifOutOctets if95Octets"

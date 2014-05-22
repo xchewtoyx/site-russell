@@ -1,13 +1,47 @@
-:title: This is the title for the page
+:title: Russell Heilling, Packet wrangler
 :description:
-    This is the index page of the project, blah blah blah.
+    Thoughts on technology from an experienced IP Networking
+    professional.
 
-This page title too
-===================
+Russell Heilling
+================
 
 Welcome
 -------
 
-This is an example index page.
+Hi there.  I am Russell Heilling and this is my website.  For regular updates
+you can follow me using the social links in the sidebar.
 
-Isn't it wonderful?
+This site is primarily technically focussed and the main categories are
+:doc:`networks/index`, :doc:`coding/index` and :doc:`sysadmin/index`.  And
+sometimes a bit of :doc:`android/index`
+
+Elsewhere on the Internet
+-------------------------
+
+`Perlmonkey`_ - my technical blog hosted on blogger.
+
+.. _perlmonkey: http://perlmonkey.blogspot.com/
+
+My `github`_ account
+
+.. _github: http://github.com/xchewtoyx
+
+`Random Meanderings`_ - My random posts.  Latest incarnation of an online
+journal  I have been running since around '97.  Language may offend.
+
+.. _random meanderings: http://meanderings.s8n.net/
+
+`Scribblings`_ - My ventures into the realm of fiction writing.  An alternative
+index of this is available here on the Fiction page
+
+.. _scribblings: http://scribblings.s8n.net/
+
+.. toctree::
+   :hidden:
+
+   aboutme
+   coding/index
+   networks/index
+   sysadmin/index
+   android/index

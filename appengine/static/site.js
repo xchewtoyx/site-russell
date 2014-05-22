@@ -1,6 +1,7 @@
 var Site = {
     init : function () {
         this.applyStyles();
+        // this.watchSearchForm();
     },
 
     applyStyles: function () {
@@ -109,6 +110,51 @@ var Site = {
                 "' data-slide='next'></a>");
         $( this ).find("a.right").append(
             "<span class='glyphicon glyphicon-chevron-right'></span>");
+    },
+
+    watchSearchForm : function () {
+        // The base element to use when monitoring for search results
+        var search_form = $("nav div.search")[0];
+
+        // Mutation types to observe
+        var search_form_config = {
+            subtree: true,   // We are interested in all descendants
+            childList: true, // We want to know about added nodes
+            attributes: true
+        };
+
+        if( search_form ) {
+            // Check for dom mutations caused by GCSE.
+            var site = this;
+            var observer = new MutationObserver(function (mutations) {
+                site.searchFormObserver(mutations);
+            });
+
+            observer.observe(search_form, search_form_config);
+        }
+    },
+
+    // This needs to be streamlined
+    searchFormObserver : function(mutations) {
+        for( var i = 0; i < mutations.length; i++) {
+            var mutation = mutations[i];
+            if( mutation.type == "childList" ) {
+                console.log('Childlist mutation', mutation);
+                var search_form = $(mutation.target).find(
+                    "form.gsc-search-box");
+                if( search_form ) {
+                    if( search_form.not("form.nav-form") ) {
+                        search_form.addClass("nav-form");
+                    }
+                    var search_box = search_form.find(
+                        "input.gsc-input").not(".form-control");
+                    if ( search_box ) {
+                        search_box.addClass("form-control");
+                        search_box.wrap("<div class='input-group'></div>");
+                    }
+                }
+            }
+        }
     },
 };
 

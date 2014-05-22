@@ -84,6 +84,24 @@ app = webapp.WSGIApplication([
   # Render the sitemap
   webapp.Route('/sitemap.xml', SitemapHandler),
 
+  # Renamed files
+  webapp.Route('/android-1/ly-f1', webapp.RedirectHandler,
+               defaults={'_uri': '/android/ly-fi.html'}),
+  webapp.Route('/android-1/automating-screenshots', webapp.RedirectHandler,
+                defaults={'_uri':'/android/screenshots.html'}),
+  webapp.Route('/android-1', webapp.RedirectHandler,
+                defaults={'_uri':'/android/'}),
+  webapp.Route('/networking-resources/cricket-95',
+               webapp.RedirectHandler,
+               defaults={'_uri':'/networks/percentile/cricket95.html'}),
+  webapp.Route('/networking-resources/what-is-95th-percentile',
+               webapp.RedirectHandler,
+               defaults={'_uri':'/networks/percentile/whatis.html'}),
+  webapp.Route('/networking-resources', webapp.RedirectHandler,
+               defaults={'_uri':'/networks/'}),
+  webapp.Route('/scripts/imgurdl.py', webapp.RedirectHandler,
+               defaults={'_uri':'/_downloads/imgurdl.py'}),
+
   # Attempt to render any unmatched urls
   (r'/.*', SphinxJsonHandler),
 ], debug=True)
