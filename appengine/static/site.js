@@ -8,6 +8,7 @@ var Site = {
         // Style base document
         $("div.body").addClass("col-sm-8");
         $("div.breadcrumbs").addClass("col-sm-8");
+        $("div.foot-ad-unit").addClass("col-sm-8");
         $("div.related").addClass("col-sm-3 col-sm-offset 1");
         $("div.related ol").addClass("nav nav-pills pull-right");
 
