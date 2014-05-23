@@ -16,8 +16,12 @@ This site is primarily technically focussed and the main categories are
 :doc:`networks/index`, :doc:`coding/index` and :doc:`sysadmin/index`.  And
 sometimes a bit of :doc:`android/index`
 
-Elsewhere on the Internet
--------------------------
+About the author
+----------------
+
+You could take a look at :doc:`aboutme` (very dated), or more likely check out
+some of the links below.  There are also links to be social networking profiles
+in the site footer.
 
 `Perlmonkey`_ - my technical blog hosted on blogger.
 
