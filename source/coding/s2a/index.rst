@@ -71,7 +71,7 @@ Once this is done you can use the following make shortcuts:
 
 Rebuild modified site content.
 
-;:
+::
 
    make json-all
 
