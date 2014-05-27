@@ -93,7 +93,7 @@ app = webapp.WSGIApplication([
                 defaults={'_uri':'/android/'}),
   webapp.Route('/networking-resources/cricket-95',
                webapp.RedirectHandler,
-               defaults={'_uri':'/networks/percentile/cricket95/'}),
+               defaults={'_uri':'/coding/percentiles/cricket95/'}),
   webapp.Route('/networking-resources/what-is-95th-percentile',
                webapp.RedirectHandler,
                defaults={'_uri':'/networks/percentile/whatis/'}),
