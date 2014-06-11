@@ -45,6 +45,7 @@ index of this is available here on the Fiction page
    :hidden:
 
    aboutme
+   cv
    coding/index
    networks/index
    sysadmin/index

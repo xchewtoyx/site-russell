@@ -1,6 +1,14 @@
 A Brief history of me.
 ======================
 
+My current CV
+-------------
+
+https://docs.google.com/document/d/1e2MloIPjRZi5DyREjXShIzjBxng0D7ufgZF9-TczcWM/view
+
+An old personal statement
+-------------------------
+
 15th September 2002
 
 I have been working for an ISP since 1996, and have gained substantial IP

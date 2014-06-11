@@ -5,7 +5,7 @@ This Site
 ---------
 
 This site is using a basic framework that I knocked together to push
-Sphinx content to google appengine.  There is some information on this 
+Sphinx content to google appengine.  There is some information on this
 framework at :doc:`s2a/index`.
 
 Percentiles

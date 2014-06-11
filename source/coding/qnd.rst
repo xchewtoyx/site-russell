@@ -1,6 +1,8 @@
 Quick-n-Dirty Scripts
 =====================
 
+.. index: python, time, log
+
 depoch
 ------
 
