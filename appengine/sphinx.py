@@ -96,7 +96,7 @@ app = webapp.WSGIApplication([
                defaults={'_uri':'/coding/percentiles/cricket95/'}),
   webapp.Route('/networking-resources/what-is-95th-percentile',
                webapp.RedirectHandler,
-               defaults={'_uri':'/networks/percentile/whatis/'}),
+               defaults={'_uri':'/coding/percentiles/whatis/'}),
   webapp.Route('/networking-resources', webapp.RedirectHandler,
                defaults={'_uri':'/networks/'}),
   webapp.Route('/scripts/imgurdl.py', webapp.RedirectHandler,
